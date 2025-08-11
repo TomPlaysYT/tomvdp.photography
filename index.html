@@ -11,8 +11,26 @@
             color: #eee;
             font-family: 'Helvetica Neue', Arial, sans-serif;
         }
+        .navbar {
+            background: #222;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px #e91e6333;
+        }
+        .navbar a {
+            color: #e91e63;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.08rem;
+            font-weight: bold;
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+        .navbar a:hover {
+            color: #fff;
+        }
         .container {
-            max-width: 700px;
+            max-width: 900px;
             margin: 3rem auto;
             padding: 2rem;
             background: #222;
@@ -29,35 +47,57 @@
             text-align: center;
             font-size: 1.2rem;
         }
-        .gallery-link {
-            display: block;
-            text-align: center;
-            margin: 2rem 0;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
         }
-        .gallery-link a {
-            display: inline-block;
-            background: #e91e63;
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 2rem;
+        .gallery-grid img {
+            width: 100%;
             border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: background 0.2s, color 0.2s;
-        }
-        .gallery-link a:hover {
-            background: #fff;
-            color: #e91e63;
             box-shadow: 0 2px 8px #e91e6333;
+            border: 3px solid #e91e6380;
+        }
+        .gallery-caption {
+            text-align: center;
+            color: #e91e63;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 1rem;
+            }
+            .gallery-grid {
+                gap: 0.7rem;
+            }
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="gallery.php">Motorsports Gallery</a>
+        <!-- Add other nav links here if needed -->
+    </nav>
     <div class="container">
         <h1>Tom VDP Photography</h1>
-        <p>Welcome to my motorsports photography site. Explore my work and check out the latest photo gallery!</p>
-        <div class="gallery-link">
-            <a href="gallery.php">View Motorsports Photo Gallery</a>
+        <p>Welcome to my motorsports photography site. Explore my work and check out the gallery below!</p>
+        <div class="gallery-grid">
+            <div>
+                <img src="images/motorsports/photo1.jpg" alt="Motorsports photo 1">
+                <div class="gallery-caption">Photo 1</div>
+            </div>
+            <div>
+                <img src="images/motorsports/photo2.jpg" alt="Motorsports photo 2">
+                <div class="gallery-caption">Photo 2</div>
+            </div>
+            <div>
+                <img src="images/motorsports/photo3.jpg" alt="Motorsports photo 3">
+                <div class="gallery-caption">Photo 3</div>
+            </div>
+            <!-- Add more static gallery items as needed -->
         </div>
     </div>
 </body>
