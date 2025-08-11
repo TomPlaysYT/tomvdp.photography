@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tom VDP Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The photography portfolio of Tom VDP. Browse stunning landscapes, portraits, and creative moments.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #222;
+            background: #f7f7f7;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #e91e63;
+        }
+        .hero {
+            padding: 2rem 0;
+            text-align: center;
+            background: url('images/hero.jpg') center/cover no-repeat;
+            min-height: 300px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            background: rgba(34,34,34,0.6);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+        }
+        .gallery {
+            max-width: 900px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0 1rem 0;
+            background: #222;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .hero h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tom VDP Photography</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Capturing Life, One Moment at a Time</h2>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <img src="images/photo1.jpg" alt="Landscape photo">
+        <img src="images/photo2.jpg" alt="Portrait photo">
+        <img src="images/photo3.jpg" alt="Urban scene">
+        <img src="images/photo4.jpg" alt="Wildlife shot">
+        <img src="images/photo5.jpg" alt="Creative light">
+        <img src="images/photo6.jpg" alt="Nature detail">
+    </section>
+
+    <section id="about" style="max-width: 700px; margin: 3rem auto; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h2>About Tom</h2>
+        <p>Hello! I'm Tom VDP, a photographer passionate about capturing the beauty in everyday moments. Whether it's sweeping landscapes, intimate portraits, or vibrant street scenes, my goal is to tell stories through images. Explore my portfolio and feel free to reach out for collaborations, prints, or bookings.</p>
+    </section>
+
+    <section id="contact" style="max-width: 700px; margin: 3rem auto; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:tom@example.com">tom@example.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/tomvdp" target="_blank">@tomvdp</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Tom VDP Photography. All rights reserved.
+    </footer>
+</body>
+</html>
